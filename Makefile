@@ -3,12 +3,13 @@
 
 # specify the make command
 MAKE=/usr/bin/make
+# general run command for each snippet
+RUN=$(MAKE) -C $@ run
 
 # all target should include every snippet which has to be build
 all: interface-arbitaryDimensions
 
-
-# list of all different snippets
+# list of all different snippets - each snippet should include 'make run'
 .PHONY: interface-arbitaryDimensions
 interface-arbitaryDimensions:
-	$(MAKE) -C interface-arbitaryDimensions
+	$(RUN)
