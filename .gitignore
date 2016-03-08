@@ -1,3 +1,4 @@
+## Fotran things
 # Compiled Object files
 *.slo
 *.lo
@@ -26,3 +27,30 @@
 *.exe
 *.out
 *.app
+
+
+## OSX related things
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two
+.
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+## Editor things
+.tags
