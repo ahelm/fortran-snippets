@@ -17,7 +17,7 @@ contains
   subroutine func_dim1( arr )
     integer, dimension( 1:2 )        :: arr
 
-    write( * , * ) "insdie func_dim1"
+    write( * , * ) "inside func_dim1"
     write( * , * ) shape(arr)
     write( * , * ) arr
 
@@ -26,7 +26,7 @@ contains
   subroutine func_dim2( arr )
     integer, dimension( 1:2, 1:2 )   :: arr
 
-    write( * , * ) "insdie func_dim2"
+    write( * , * ) "inside func_dim2"
     write( * , * ) shape(arr)
     write( * , * ) arr
 
