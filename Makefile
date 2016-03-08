@@ -6,10 +6,18 @@ MAKE=/usr/bin/make
 # general run command for each snippet
 RUN=$(MAKE) -C $@ run
 
+# SNIPPETS
+SNIPPETS = interface-arbitaryDimensions
+
 # all target should include every snippet which has to be build
-all: interface-arbitaryDimensions
+all: $(SNIPPETS)
 
 # list of all different snippets - each snippet should include 'make run'
-.PHONY: interface-arbitaryDimensions
-interface-arbitaryDimensions:
+.PHONY: $(SNIPPETS)
+$(SNIPPETS):
 	$(RUN)
+
+clean:
+	for dir in $(SNIPPETS); do \
+		$(MAKE) -C $$dir clean; \
+	done
