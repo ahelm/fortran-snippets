@@ -9,7 +9,7 @@ FLAGS     = -pipe -ffree-line-length-none -fno-range-check \
 BINARY    = dimensionTest
 
 .PHONY: run
-run: dimensionTest
+run: $(BINARY)
 	./$<
 
 dimensionTest: arbitaryDimensionsTest.f03
