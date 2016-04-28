@@ -28,6 +28,13 @@
 *.out
 *.app
 
+## Compiler/Profiler output
+*.optrpt
+*.def
+
+## Project related binaries
+*.bin
+
 
 ## OSX related things
 .DS_Store
