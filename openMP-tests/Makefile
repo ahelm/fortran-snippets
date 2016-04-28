@@ -7,7 +7,7 @@ FC_DEBUG     = -g3 -check all -fpe0 -warn -traceback -debug extended
 FC_FLAGS     = -diag-disable=7025,7416 -qopenmp -fpp -stand f03 -free -Tf
 
 
-BINARY    = openmp-hello.bin openmp-pi.bin
+BINARY    = openmp-hello.bin openmp-pi.bin openmp-oneliner.bin
 
 .PHONY: run
 run: $(BINARY)
@@ -20,6 +20,9 @@ openmp-hello.bin: openmp-hello.f03
 
 openmp-pi.bin: openmp-pi.f03
 	$(FC) $(FC_PROFILING) $(FC_FLAGS) $< -o $@
+
+openmp-oneliner.bin: openmp-oneliner.f03
+	$(FC) $(FC_DEBUG) $(FC_FLAGS) $< -o $@
 
 clean:
 	rm -rf $(BINARY) *.dSYM *.mod *.optrpt *.def
