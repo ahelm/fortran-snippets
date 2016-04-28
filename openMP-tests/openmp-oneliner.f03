@@ -31,7 +31,7 @@ program openmp_oneliner
   ! perform calculations
   ! -----------------------------------
   t_start = omp_get_wtime()
-  !$omp parallel
+  !$omp parallel shared(x, y)
   test_array = x + y
   !$omp end parallel
   t_end = omp_get_wtime()
