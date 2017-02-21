@@ -14,7 +14,7 @@ contains
     ! input parameters
     integer, intent(in) :: lb(2), ub(2)
     real, dimension(:,:), intent(inout), pointer :: ptr
-    real, dimension( lb(1):ub(1), lb(2):ub(2) ), intent(inout), target  :: arr
+    real, dimension( lb(1):ub(1), lb(2):ub(2) ), intent(in), target  :: arr
 
     ptr( lb(1):ub(1), lb(2):ub(2) ) => arr
 
