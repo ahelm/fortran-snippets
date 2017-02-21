@@ -7,7 +7,7 @@ MAKE=/usr/bin/make
 RUN=$(MAKE) -C $@ run
 
 # SNIPPETS
-SNIPPETS = interface-arbitaryDimensions openMP-tests
+SNIPPETS = interface-arbitaryDimensions openMP-tests dummyPointerArray
 
 # all target should include every snippet which has to be build
 all: $(SNIPPETS)
